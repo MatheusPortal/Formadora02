@@ -10,4 +10,8 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
+  {
+    path: 'color.change',
+    loadComponent: () => import('./color.change/color.change.page').then( m => m.ColorChangePage)
+  },
 ];

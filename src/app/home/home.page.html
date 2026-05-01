@@ -7,14 +7,23 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card>
+    <img alt="Silhouette of mountains" src="https://i.imgur.com/8iVA8Nt.jpeg" />
+    <ion-card-header>
+      <ion-card-title>{{alunos[0].nome}}</ion-card-title>
+      <ion-card-subtitle>{{alunos[0].id}} - {{alunos[0].unidade}} - {{alunos[0].turno}}</ion-card-subtitle>
+    </ion-card-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-card-content>
+      {{alunos[0].mensagem}}
+    </ion-card-content>
+    <ion-list>
+    <ion-item>
+      <ion-input [value]="inputModel" (ionInput)="onInput($event)" placeholder="Chave"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button (click)="GoColorChanger()">Proxima pagina</ion-button>
+  </ion-card>
+
+
 </ion-content>

@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>color.change</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" [style.--background]="BackColor">
+  <ion-card>
+    <ion-range min="0" max="255" step="1" [value]="red" (ionInput)="atualizarRed($event)"></ion-range>
+    <ion-range min="0" max="255" step="1" [value]="green" (ionInput)="atualizarGreen($event)"></ion-range>
+    <ion-range min="0" max="255" step="1" [value]="blue" (ionInput)="atualizarBlue($event)"></ion-range>
+
+    <ion-button [style.--background]="buttonColor" (click)="alterarCorBotao()">Alterar cor botão</ion-button>
+    <ion-button (click)="alterarCorFundo()">Alterar cor Fundo</ion-button>
+    <ion-button (click)="Gohome()">Voltar pagina</ion-button>
+  </ion-card>
+</ion-content>
