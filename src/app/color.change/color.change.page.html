@@ -1,13 +1,15 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>color.change</ion-title>
+    <ion-title>Mix de cores</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" [style.--background]="BackColor">
   <ion-card>
     <ion-range min="0" max="255" step="1" [value]="red" (ionInput)="atualizarRed($event)"></ion-range>
+    <br>
     <ion-range min="0" max="255" step="1" [value]="green" (ionInput)="atualizarGreen($event)"></ion-range>
+    <br>
     <ion-range min="0" max="255" step="1" [value]="blue" (ionInput)="atualizarBlue($event)"></ion-range>
 
     <ion-button [style.--background]="buttonColor" (click)="alterarCorBotao()">Alterar cor botão</ion-button>

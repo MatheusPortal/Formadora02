@@ -16,7 +16,6 @@ export class ColorChangePage {
 
   constructor(private router: Router) { }
 
-
   red: number = 0;
   green: number = 0;
   blue: number = 0;

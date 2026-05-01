@@ -1,5 +1,17 @@
 
 ion-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 12px;
-    margin: 12px;
+    margin: 20px;
+}
+
+ion-range {
+    width: 50%;
+}
+
+ion-button {
+    width: 50%;
 }
